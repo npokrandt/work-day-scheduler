@@ -3,10 +3,15 @@
 // in the html.
 
 $(function () {
+ 
+  var today = dayjs().format("dddd, MMMM D")
 
+  //updating the date header
+  var timeHeader = $('#currentDay')
+
+  //determines whether the date ends in "st","nd","rd", of "th"
   function addDateAppendage(today){
-    if (today[today.length - 1] == 1){
-      console.log("test")
+    if (today[today.length - 1] == 1){     
       today = today + "st"
     } else if (today[today.length - 1] == 2){
       today = today + "nd"
@@ -15,17 +20,10 @@ $(function () {
     } else {
       today = today + "th"
     }
+    return today
   }
   
-  var today = dayjs().format("dddd, MMMM D")
-  
-  //determines whether the date ends in "st","nd","rd", of "th"
-  addDateAppendage(today)
-  
-  //updating the date header
-  var timeHeader = $('#currentDay')
-  
-  timeHeader.text(today) 
+  timeHeader.text(addDateAppendage(today)) 
 
   //functions on page startup
   addPreviousEvents()
