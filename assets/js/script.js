@@ -68,6 +68,11 @@ $(function () {
     var eventToBeSaved = parentDiv.children("textarea").val()
     if (eventToBeSaved != ""){
       localStorage.setItem(id, eventToBeSaved)
+    } else {
+      //remove item from storage if it exists, if input is ""
+      if (localStorage.getItem(id) != null){
+        localStorage.removeItem(id)
+      }
     }
   }
 

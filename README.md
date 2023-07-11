@@ -8,7 +8,7 @@ Have fun, and make sure to manage your time well!
 
 ## What it looks like:
 
-<!-- ![header of the page](/assets/images/Screenshot%202023-06-12%20at%2023-06-27%20Nathan's%20Portfolio.png) -->
+![header of the page](assets/images/Screenshot%202023-07-10%20at%2018-29-10%20Work%20Day%20Scheduler.png)
 
 ## Link to site:
 
